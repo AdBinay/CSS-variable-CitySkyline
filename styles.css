@@ -1,16 +1,15 @@
 *{
-    border: 1px solid black;
     box-sizing: border-box;
 }
 :root{
-    --building-color1: #aa80ff;
-    --building-color2: #66cc99;
-    --building-color3: #cc6699;
-    --building-color4: #538cc6;
-    --window-color1: #bb99ff;
-    --window-color2: #8cd9b3;
-    --window-color3: #d98cb3;
-    --window-color4: #8cb3d9;
+    --building-color1: #000;
+    --building-color2: #000;
+    --building-color3: #000;
+    --building-color4: #000;
+    --window-color1: #777;
+    --window-color2: #777;
+    --window-color3: #777;
+    --window-color4: #777;
 }
 body{
     height: 100vh;
@@ -92,18 +91,23 @@ body{
     height: 45%;
     position: relative; 
     left: 10%;
-  }
-.fb5 {
-    width: 10%;
-    height: 33%;
-    background-color: var(--building-color2);
-    position: relative; 
-    right: 10%;
 }
-.fb6{
+.fb6 {
     width: 9%;
     height: 38%;
-    background-color: var(--building-color3);
+    background: repeating-linear-gradient(
+        90deg,
+        var(--building-color3),
+        var(--building-color3) 10%,
+        transparent 10%,
+        transparent 30%
+      ),
+      repeating-linear-gradient(
+        var(--building-color3),
+        var(--building-color3) 10%,
+        var(--window-color3) 10%,
+        var(--window-color3) 30%
+      );
 }
 .bb1-window{
     height: 10%;
@@ -226,4 +230,51 @@ body{
     border-radius: 50%;
     background-color: var(--window-color1);
     margin: 10%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.fb4a{
+    border-top: 5vh solid transparent;
+    border-left: 8vw solid var(--building-color1);
+}
+.fb5 {
+    width: 10%;
+    height: 33%;
+    position: relative;
+    right: 10%;
+    background: repeating-linear-gradient(
+        var(--building-color2),
+        var(--building-color2) 5%,
+        transparent 5%,
+        transparent 10%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--building-color2),
+      var(--building-color2) 12%,
+      var(--window-color2) 12%,
+      var(--window-color2) 44%
+    );
+}
+.sky {
+    .sky {
+        background: radial-gradient(
+            closest-corner circle at 15% 15%,
+            #ccc,
+            #ccc 20%,
+            #445 21%,
+            #223 100%
+        );
+    }
+}
+@media (max-width: 1000px){
+    .sky {
+        background: radial-gradient(
+        closest-corner circle at 15% 15%,
+        #ffcf33,
+        #ffcf33 20%,
+        #ffff66 21%,
+        #bbeeff 100%
+        );
+    }
 }
