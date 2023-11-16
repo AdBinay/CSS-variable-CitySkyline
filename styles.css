@@ -7,9 +7,10 @@
     --building-color2: #66cc99;
     --building-color3: #cc6699;
     --building-color4: #538cc6;
-    --window-color1: black;
+    --window-color1: #bb99ff;
     --window-color2: #8cd9b3;
     --window-color3: #d98cb3;
+    --window-color4: #8cb3d9;
 }
 body{
     height: 100vh;
@@ -29,9 +30,6 @@ body{
 .bb1{
     width: 10%;
     height: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .bb1a{
@@ -80,22 +78,18 @@ body{
 .fb1{
     width: 10%;
     height: 60%;
-    background-color: var(--building-color4);
 }
 .fb2{
     width: 10%;
     height: 40%;
-    background-color: var(--building-color3);
 }
 .fb3{
     width: 10%;
     height: 35%;
-    background-color: var(--building-color1);
 }
 .fb4 {
     width: 8%;
     height: 45%;
-    background-color: var(--building-color1);
     position: relative; 
     left: 10%;
   }
@@ -147,4 +141,89 @@ body{
     width: 100%;
     height: 85%;
     background-color: var(--building-color4);
+}
+.building-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bb4-window{
+    width: 18%;
+    height: 90%;
+    background-color: var(--window-color4);
+}
+.window-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.fb1b{
+    width: 60%;
+    height: 10%;
+    background-color: var(--building-color4);
+}
+.fb1c {
+    width: 100%;
+    height: 80%;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--building-color4),
+        var(--building-color4) 10%,
+        transparent 10%,
+        transparent 15%
+      ),
+      repeating-linear-gradient(
+        var(--building-color4),
+        var(--building-color4) 10%,
+        var(--window-color4) 10%,
+        var(--window-color4) 90%
+      );
+}
+.fb1a{
+    border-bottom: 7vh solid var(--building-color4);
+    border-right: 2vw solid transparent;
+    border-left: 2vw solid transparent;
+}
+.fb2a{
+    width: 100%;
+    border-bottom: 10vh solid var(--building-color3);
+    border-left: 1vw solid transparent;
+    border-right: 1vw solid transparent;
+}
+.fb2b{
+    width: 100%;
+    height: 75%;
+    background-color: var(--building-color3);
+}
+.fb2-window{
+    width: 22%;
+    height: 100%;
+    background-color: var(--window-color3);
+}
+.fb3a{
+    width: 80%;
+    height: 15%;
+    background-color: var(--building-color1);
+}
+.fb3b{
+    width: 100%;
+    height: 35%;
+    background-color: var(--building-color1);
+}
+.fb3-window{
+    width: 25%;
+    height: 80%;
+    background-color: var(--window-color1);
+}
+.fb4b{
+    width: 100%;
+    height: 89%;
+    background-color: var(--building-color1);
+}
+.fb4-window{
+    width: 30%;
+    height: 10%;
+    border-radius: 50%;
+    background-color: var(--window-color1);
+    margin: 10%;
 }
